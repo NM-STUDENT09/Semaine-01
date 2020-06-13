@@ -1,52 +1,164 @@
+/* ==================================================
+        SEMAINE 01 - Exercice 1
+        Première page HTML & CSS
+        Recette de cuisine préférée
+  ==================================================
 
-/* Style texte */
-h2{
-    font-size: 30px;
-    color: black;
-}
-h3 {
-    margin: 0 auto;
-}
-p {
-    color: rgb(84,84,84);
-    padding: 10%;
-    line-height: 180%;
-    letter-spacing: 200%;
-}
-/* Structure */
+/* STRUCTURE ---------------------------------------------------*/
 body {
-    background-color: rgb(249,249,249);
-    color: rgb(27,29,38);
-    font-family: 'Roboto', sans-serif;
-    width: 100%;
-    height: auto;
+  /*background-color: rgb(249, 249, 249);*/
+  background-color: #f7cec4;
+  color: rgb(27, 29, 38);
+  font-family: 'Roboto', sans-serif;
+  width: 100%;
+  height: auto;
 }
 .main-section {
-    width: 900px;
-    display: flex;
-    flex-direction: column;
-    margin: 0 auto;
-    justify-content: center;
-    height: auto
+  width: 900px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  justify-content: center;
+  height: auto;
+  /*border: 1px solid goldenrod;*/
 }
 div.logo {
-    margin-top: 2%;
-    margin-bottom: 5%;
+  margin-top: 2%;
+  margin-bottom: 5%;
+  background-color: white;
+  padding: 10px 45px;
+  /*border: 1px solid red;*/
 }
-div.first-titles-container { 
-    padding: 50px;
-    width: 30%;
+div.first-titles-container {
+  padding: 50px;
+  width: 30%;
+  /* border: 1px solid red;*/
 }
 div.title {
-    border-left: 5px solid rgb(46,64,136);
-    margin: 1%;
-    padding-left: 1%;
-    letter-spacing: 3px;
-    font-family: 'PT Sans Caption', sans-serif;
+  border-left: 5px solid #cb0912;
+  margin: 1%;
+  padding-left: 2%;
+  letter-spacing: 3px;
+  font-family: 'PT Sans Caption', sans-serif;
+  /* border: 1px solid red;*/
+}
+.text-container-first,
+.text-container-second {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0px 10px;
 }
 .text-container-first {
-    display: flex;
-    justify-content: flex-start;
+  -webkit-column-count: 2; /* Opera, Safari, Google Chrome */
+  -moz-column-count: 2; /* Firefox */
+  column-count: 2; /* Internet Explorer */
+  column-gap: 20px;
+  column-width: 100px;
+  /*border: 1px solid purple;*/
 }
-/* Images */
+.text-container-second {
+  /*border: 1px solid red;*/
+}
 
+div.col1,
+.col2 {
+  padding: 10px;
+  margin: 10px 0;
+  text-align: justify;
+  background-color: white;
+  border-radius: 5px;
+  /*border: 1px solid blue;*/
+}
+div.col1 {
+  width: 50%;
+}
+
+/* Style TEXTE ---------------------------------------------------*/
+h1 {
+  color: #cb0912;
+}
+h2 {
+  font-size: 30px;
+  padding: 0 10px;
+  color: #e7898a;
+  border-left: 3px dotted #cb0912;
+  /*border: 1px solid green;*/
+}
+h3 {
+  margin: 0 auto;
+  /*border: 1px solid green;*/
+}
+p {
+  padding: 10px;
+  text-align: justify;
+  background-color: white;
+  border-radius: 5px;
+  /*border: 1px solid blue;*/
+}
+p.pied {
+  text-align: center;
+  margin: 0 10px;
+}
+/*
+.blue {
+  color: blue;
+}*/
+a:link {
+  color: blue;
+  text-decoration: none;
+}
+a:hover,
+a:visited,
+a:active {
+  color: grey;
+}
+
+/* Liste ordonnée */
+ul {
+  list-style: none;
+}
+li::before {
+  content: '•';
+  color: #cb0912;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
+
+/* Liste non ordonnée */
+ol {
+  list-style: none;
+  counter-reset: li;
+  padding: 10px 10px 10px 35px;
+  background-color: white;
+  border-radius: 5px;
+  /*border: 1px solid blue;*/
+}
+li {
+  padding: 5px 0;
+  counter-increment: li;
+}
+ol li::before {
+  font-weight: bold;
+  content: counter(li);
+  color: #cb0912;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1.5em;
+  margin-right: 0.5em;
+  text-align: right;
+  direction: rtl;
+}
+
+/* IMAGES ---------------------------------------------------*/
+img.recette {
+  border-radius: 5px;
+  margin: 10px auto;
+  border: 7px solid #cb0912;
+}
+img.logo {
+  /*margin-left: 250px;*/
+  height: 80px;
+  /*border: 1px solid olivedrab;*/
+}
